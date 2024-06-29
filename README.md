@@ -1,7 +1,8 @@
 # ETH-Intermediate-mod_3
 
 ## Overview
-    DheerajErc20 is a simple ERC20 token contract built using Solidity. This contract allows the deployment of an ERC20 token named "KARAN" with the symbol "DK". The contract includes functionalities for minting new tokens, burning tokens, and transferring tokens.
+    DheerajErc20 
+IT is a simple ERC20 token contract built using Solidity. This contract allows the deployment of an ERC20 token named "KARAN" with the symbol "DK". The contract includes functionalities for minting new tokens, burning tokens, and transferring tokens.
 
 ## Features
 ERC20 Token Standard: Inherits from OpenZeppelin's ERC20 implementation.
@@ -17,10 +18,12 @@ Transfer: Standard ERC20 transfer functionality with a custom wrapper for decima
 ## Contract Details
 
 ### State Variables
-    address public owner : Stores the address of the contract owner.
+    address public owner 
+Stores the address of the contract owner.
     
 ### Modifiers
-    modifier onlyOwner() : modifier to restrict access to the administrator
+    modifier onlyOwner() 
+modifier to restrict access to the administrator
 
 ### Constructor
     constructor(uint256 initialSupply) ERC20("KARAN", "DK")  
@@ -28,6 +31,7 @@ Transfer: Standard ERC20 transfer functionality with a custom wrapper for decima
         owner = msg.sender;
         _mint(owner, initialSupply * 10 ** uint256(decimals()));
     }
+This constructor is called from openZeppelin repo.
 ### Functions
 1. mint
    
@@ -36,7 +40,7 @@ Transfer: Standard ERC20 transfer functionality with a custom wrapper for decima
             _mint(to, amount * 10 ** uint256(decimals()));
           }
    
-  Through function owner can mint tokens to addresses.
+Through function owner can mint tokens to addresses.
 
 2. burn
 
@@ -46,7 +50,7 @@ Transfer: Standard ERC20 transfer functionality with a custom wrapper for decima
             _burn(msg.sender, amount * 10 ** uint256(decimals()));
           }
 
-  through this function tokens will be burnt.
+Through this function tokens will be burnt.
 
 3. transferAmount
 
@@ -56,6 +60,6 @@ Transfer: Standard ERC20 transfer functionality with a custom wrapper for decima
              return transfer(to, amount * 10 ** uint256(decimals()));
            }
 
-   Through this function we can transfer tokns to another account.
+Through this function we can transfer tokns to another account.
          
  
