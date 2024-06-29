@@ -2,7 +2,7 @@
 
 ## Overview
     DheerajErc20 
-IT is a simple ERC20 token contract built using Solidity. This contract allows the deployment of an ERC20 token named "KARAN" with the symbol "DK". The contract includes functionalities for minting new tokens, burning tokens, and transferring tokens.
+It is a simple ERC20 token contract built using Solidity. This contract allows the deployment of an ERC20 token named "KARAN" with the symbol "DK". The contract includes functionalities for minting new tokens, burning tokens, and transferring tokens.
 
 ## Features
 ERC20 Token Standard: Inherits from OpenZeppelin's ERC20 implementation.
