@@ -33,7 +33,7 @@ modifier to restrict access to the administrator
     }
 This constructor is called from openZeppelin repo.
 ### Functions
-1. mint
+#### 1. mint
    
           function mint(address to, uint256 amount) public onlyOwner  
           {
@@ -42,7 +42,7 @@ This constructor is called from openZeppelin repo.
    
 Through function owner can mint tokens to addresses.
 
-2. burn
+##### 2. burn
 
 
           function burn(uint256 amount) public            
@@ -52,7 +52,7 @@ Through function owner can mint tokens to addresses.
 
 Through this function tokens will be burnt.
 
-3. transferAmount
+#### 3. transferAmount
 
    
            function transferAmount(address to, uint256 amount) public returns (bool)
@@ -61,5 +61,8 @@ Through this function tokens will be burnt.
            }
 
 Through this function we can transfer tokns to another account.
+
+### License
+This project is licensed under the MIT License.
          
  
