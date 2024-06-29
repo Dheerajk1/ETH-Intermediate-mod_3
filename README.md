@@ -1,7 +1,7 @@
 # ETH-Intermediate-mod_3
 
 ## Overview
-  DheerajErc20 is a simple ERC20 token contract built using Solidity. This contract allows the deployment of an ERC20 token named "KARAN" with the symbol "DK". The contract includes functionalities for minting new tokens, burning tokens, and transferring tokens.
+    DheerajErc20 is a simple ERC20 token contract built using Solidity. This contract allows the deployment of an ERC20 token named "KARAN" with the symbol "DK". The contract includes functionalities for minting new tokens, burning tokens, and transferring tokens.
 
 ## Features
 ERC20 Token Standard: Inherits from OpenZeppelin's ERC20 implementation.
@@ -30,27 +30,32 @@ Transfer: Standard ERC20 transfer functionality with a custom wrapper for decima
     }
 ### Functions
 1. mint
-      function mint(address to, uint256 amount) public onlyOwner  
-    {
-        _mint(to, amount * 10 ** uint256(decimals()));
-    }
    
-Through function owner can mint tokens to addresses.
+          function mint(address to, uint256 amount) public onlyOwner  
+          {
+            _mint(to, amount * 10 ** uint256(decimals()));
+          }
+   
+  Through function owner can mint tokens to addresses.
 
 2. burn
-       function burn(uint256 amount) public            
-    {
-        _burn(msg.sender, amount * 10 ** uint256(decimals()));
-    }
 
-through this function tokens will be burnt.
+
+          function burn(uint256 amount) public            
+          {
+            _burn(msg.sender, amount * 10 ** uint256(decimals()));
+          }
+
+  through this function tokens will be burnt.
 
 3. transferAmount
-         function transferAmount(address to, uint256 amount) public returns (bool)
-    {
-        return transfer(to, amount * 10 ** uint256(decimals()));
-    }
 
- through this function we can transfer tokns to another account.
+   
+           function transferAmount(address to, uint256 amount) public returns (bool)
+           {
+             return transfer(to, amount * 10 ** uint256(decimals()));
+           }
+
+   Through this function we can transfer tokns to another account.
          
  
